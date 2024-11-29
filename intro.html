@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Imperial - Auténtico Sabor Peruano</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #e63946 30%, #f5f5f5 100%);
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        header img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        header h1 {
+            font-size: 3rem;
+            margin: 0.5rem 0;
+            text-transform: uppercase;
+        }
+        header p {
+            font-size: 1.2rem;
+            margin: 1rem 0;
+        }
+        header .btn {
+            background-color: white;
+            color: #e63946;
+            padding: 0.8rem 1.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        header .btn:hover {
+            background-color: #e63946;
+            color: white;
+        }
+
+        /* Navbar */
+        nav {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            padding: 1rem 0;
+            margin: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #e63946;
+        }
+
+        /* Sections */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        section h2 {
+            color: #e63946;
+            margin-bottom: 2rem;
+        }
+
+        /* Menu Section */
+        .menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        .menu-item {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .menu-item:hover {
+            transform: translateY(-5px);
+        }
+        .menu-item img {
+            width: 100%;
+            height: auto;
+        }
+        .menu-item h3 {
+            font-size: 1.5rem;
+            margin: 1rem 0 0.5rem;
+            color: #333;
+        }
+        .menu-item p {
+            margin-bottom: 1rem;
+            color: #666;
+        }
+        .menu-item span {
+            font-weight: bold;
+            color: #e63946;
+        }
+
+        /* Locations Section */
+        .locations {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+        .location {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form */
+        form {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        form label {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+        form input, form textarea, form button {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+        form button {
+            background-color: #e63946;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            border: none;
+        }
+        form button:hover {
+            background-color: #c51d2c;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <img src="img.jpg" alt="Sabor Imperial Logo">
+        <h1>Sabor Imperial</h1>
+        <p>Auténtico sabor peruano en cada rincón del país</p>
+        <a href="#menu" class="btn">Ver Menú</a>
+    </header>
+
+    <!-- Navbar -->
+    <nav>
+        <ul>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#menu">Menú</a></li>
+            <li><a href="#ubicaciones">Sucursales</a></li>
+            <li><a href="#reservas">Reservas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- Nosotros -->
+    <section id="nosotros">
+        <h2>Sobre Nosotros</h2>
+        <p>En Sabor Imperial, combinamos tradición y modernidad para ofrecerte una experiencia gastronómica inolvidable. Con nuestras raíces en la rica cultura culinaria de Perú, llevamos nuestros sabores auténticos a diversas ciudades de Colombia, destacándonos por la calidad de nuestros ingredientes y el cuidado en cada detalle.</p>
+    </section>
+
+    <!-- Menú -->
+    <section id="menu">
+        <h2>Nuestro Menú</h2>
+        <div class="menu">
+            <div class="menu-item">
+                <img src="img1.jpg" alt="Lomo Saltado">
+                <h3>Lomo Saltado</h3>
+                <p>Carne salteada con cebolla, tomate y papas fritas.</p>
+                <span>$40,000</span>
+            </div>
+            <div class="menu-item">
+                <img src="img2.jpg" alt="Ceviche Clásico">
+                <h3>Ceviche Clásico</h3>
+                <p>Pescado fresco marinado con limón.</p>
+                <span>$35,000</span>
+            </div>
+            <div class="menu-item">
+                <img src="img3.jpg" alt="Ají de Gallina">
+                <h3>Ají de Gallina</h3>
+                <p>Plato tradicional con sabores intensos.</p>
+                <span>$38,000</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sucursales -->
+    <section id="ubicaciones">
+        <h2>Nuestras Sucursales</h2>
+        <div class="locations">
+            <div class="location">
+                <h3>Bogotá</h3>
+                <p>Av. Calle 85 #12-34</p>
+            </div>
+            <div class="location">
+                <h3>Medellín</h3>
+                <p>Carrera 43 #32-10</p>
+            </div>
+            <div class="location">
+                <h3>Cali</h3>
+                <p>Cra. 66 #45-20</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservas -->
+    <section id="reservas">
+        <h2>Reservas</h2>
+        <form>
+            <label for="name">Nombre:</label>
+            <input type="text" id="name" required>
+            <label for="date">Fecha:</label>
+            <input type="date" id="date" required>
+            <label for="guests">Número de personas:</label>
+            <input type="number" id="guests" min="1" required>
+            <button type="submit">Reservar</button>
+        </form>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <form>
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" required>
+            <label for="message">Mensaje:</label>
+            <textarea id="message" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Sabor Imperial. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
